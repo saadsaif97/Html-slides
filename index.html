@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- page 1 -->
+    <section id="page-1">
+        <h1>Welcome to my website</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci alias ex ipsa necessitatibus cum quibusdam
+            quisquam est error culpa animi deserunt repellat nesciunt voluptatem non consectetur suscipit tenetur
+            consequatur quas laboriosam molestias, itaque voluptates neque facere ab. Nisi, saepe a.</p>
+        <div>
+            <a href="#page-2" class="btn btn-primary">
+                Next Page <i class="fa fa-arrow-circle-o-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- page 2 -->
+    <section id="page-2">
+        <h1>Hy there</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci alias ex ipsa necessitatibus cum quibusdam
+            quisquam est error culpa animi deserunt repellat nesciunt voluptatem non consectetur suscipit tenetur
+            consequatur quas laboriosam molestias, itaque voluptates neque facere ab. Nisi, saepe a.</p>
+        <div>
+            <a href="#page-1" class="btn btn-dark">
+                Previous Page <i class="fa fa-arrow-circle-o-up"></i>
+            </a>
+            <a href="#page-3" class="btn btn-primary">
+                Next Page <i class="fa fa-arrow-circle-o-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- page 3 -->
+    <section id="page-3">
+        <h1>Hey I'm Third Page</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci alias ex ipsa necessitatibus cum quibusdam
+            quisquam est error culpa animi deserunt repellat nesciunt voluptatem non consectetur suscipit tenetur
+            consequatur quas laboriosam molestias, itaque voluptates neque facere ab. Nisi, saepe a.</p>
+        <div>
+            <a href="#page-2" class="btn btn-dark">
+                Previous Page <i class="fa fa-arrow-circle-o-up"></i>
+            </a>
+            <a href="#page-4" class="btn btn-primary">
+                Next Page <i class="fa fa-arrow-circle-o-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- page 4 -->
+    <section id="page-4">
+        <h1>I am the Fourth Page</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci alias ex ipsa necessitatibus cum quibusdam
+            quisquam est error culpa animi deserunt repellat nesciunt voluptatem non consectetur suscipit tenetur
+            consequatur quas laboriosam molestias, itaque voluptates neque facere ab. Nisi, saepe a.</p>
+        <div>
+            <a href="#page-3" class="btn btn-dark">
+                Previous Page <i class="fa fa-arrow-circle-o-up"></i>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+</body>
+
+</html>

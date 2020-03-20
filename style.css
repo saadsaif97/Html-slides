@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variable definitions */
+:root{
+    --page-1-color: #f4f4f4;
+    --page-2-color: teal;
+    --page-3-color: white;
+    --page-4-color: skyblue;
+}
+
+/* animation definitions */
+@keyframes topFadeIn{
+    from{
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes topFadeLeft{
+    from{
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+body{
+    font-family: 'Baloo 2', cursive;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* page colors */
+#page-1{ 
+    background-color: var(--page-1-color); 
+}
+#page-2{ 
+    background-color: var(--page-2-color); 
+    color: #fff;
+}
+#page-3{ 
+    background-color: var(--page-3-color); 
+}
+#page-4{ 
+    background-color: var(--page-4-color); 
+}
+
+/* animation apply on page-1 h1 */
+#page-1 h1{
+    animation: topFadeIn 0.5s ease-in 0.5s backwards;
+}
+
+#page-1 p{
+    animation: topFadeLeft 0.5s ease-in 0.7s backwards;
+}
+
+section .btn:first-child{
+    margin-right: 1rem;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1;
+}
+
+p{
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 900px){
+    h1,p{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 899px){
+    h1,p{
+        width: 80%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in;
+}
+
+.btn-primary{
+    background-color: steelblue;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: rgb(54, 99, 136);
+    color: white;
+}
+
+.btn-dark{
+    background-color: darkgray;
+    color: white;
+}
+
+.btn-dark:hover{
+    background-color: gray;
+    color: white;
+}
